@@ -20,6 +20,8 @@ Route::get('/dashboard','DashboardController@dashboard')->name('dashboard');
 Route::resource('mascotas', 'MascotaController');
 Route::get('/perfil', 'PerfilController@edit')->name('perfil.edit');
 
+Route::put('/perfil/{id}', 'PerfilController@update')->name('perfil.update');
+
 Route::resource('especies', 'EspecieController');
 
 Auth::routes(['register' => false]);
